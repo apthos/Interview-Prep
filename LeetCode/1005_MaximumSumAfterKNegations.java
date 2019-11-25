@@ -1,7 +1,7 @@
 class Solution {
     /*
     Runtime: 2 ms
-    Time complexity: O(n + m) (n = A.length / m = K)
+    Time complexity: O(n * m) (n = A.length / m = K)
     Space complexity: O(1)
     */
     public int largestSumAfterKNegations(int[] A, int K) {

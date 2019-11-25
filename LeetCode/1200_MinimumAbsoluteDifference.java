@@ -2,7 +2,7 @@ class Solution {
     /*
     Runtime: 20 ms
     Time complexity: O(nlogn)
-    Space complexity: O(?)
+    Space complexity: O(1)
     */
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         Arrays.sort(arr);

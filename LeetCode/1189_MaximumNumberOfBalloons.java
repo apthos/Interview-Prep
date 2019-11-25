@@ -2,7 +2,7 @@ class Solution {
     /*
     Runtime: 7 ms
     Time complexity: O(n)
-    Space complexity: O()
+    Space complexity: O(n)
     */
     public int maxNumberOfBalloons(String text) {
         //Map to store the amount of times each letter from balloon is seen
@@ -21,7 +21,7 @@ class Solution {
             }
         }
         
-        //Create balloons until the map runs out of a necessary character to create balloon
+        //Create balloons until the map runs out of a necessary character to create 'balloon'
         int count = 0;
         while((map.get('b') > 0) && (map.get('a') > 0) && (map.get('l') > 1) && (map.get('o') > 1) && map.get('n') > 0) {
             map.replace('b', map.get('b') - 1);

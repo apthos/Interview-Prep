@@ -2,7 +2,7 @@ class Solution {
     /*
     Runtime: 2 ms
     Time complexity: O(n^2) (n = words.length = pattern.length)
-    Space complexity: O(?)
+    Space complexity: O(n)
     */
     public List<String> findAndReplacePattern(String[] words, String pattern) {
         List<String> list = new ArrayList<>();
