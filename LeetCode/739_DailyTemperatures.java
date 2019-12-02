@@ -1,21 +1,26 @@
 class Solution {
-    /* Needs improvement
-    Runtime: 716 ms
+    /*
+    Runtime: 3 ms
     Time complexity: O(n^2)
     Space complexity: O(n)
     */
     public int[] dailyTemperatures(int[] T) {
         int[] days = new int[T.length];
         
-        for(int i = 0; i < days.length - 1; i++) {
-            for(int j = i + 1; j < days.length; j++) {
-                if(T[i] < T[j]) {
-                    days[i] = j - i;
-                    j = days.length;
-                }
+        int maxTemp = T.length - 1;
+        
+        for(int i = T.length - 2; i >= 0; i--) {
+            //if today is the hottest so far, there will be no hotter day in the future
+            if(T[i] >= T[maxTemp]) {
+                maxTemp = i; days[i] = 0;
+            }
+            else {
+                //start tomorrow, if today is hotter then jump to the day that is hotter than the checked day
+                int j = i + 1;
+                while(T[i] >= T[j]) j += days[j];
+                days[i] = j - i;
             }
         }
-        
         return days;
     }
 }
