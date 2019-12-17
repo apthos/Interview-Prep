@@ -15,13 +15,13 @@ class Solution {
             i++;
         }
         
-        //if probe became null before fully creating the probing space, then the head the nth node from the end
+        //if probe became null before fully creating the probing space, then the head is the nth node from the end
         if(probe == null) {
             head = current.next;
             return head;
         }
         else {
-            //otherwise, move probing space until the end is reached
+            //otherwise, move the pointers until the end is reached
             while(probe.next != null) {
                 probe = probe.next;
                 current = current.next;
